@@ -2,6 +2,7 @@
 
 import streamlit as st
 import pandas as pd
+from PIL import Image
 import warnings
 warnings.filterwarnings('ignore')
 
@@ -9,6 +10,9 @@ warnings.filterwarnings('ignore')
 
 def main():
     # Streamlit app title
+    logo = Image.open("frddet.jpg")  # Replace with your logo path
+    
+    st.image(logo, width=800)
     st.title("Fraud Detection in Treasury Management System")
     st.subheader("Outliers Prediction by Various Models:")
 
